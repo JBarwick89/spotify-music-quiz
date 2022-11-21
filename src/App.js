@@ -6,10 +6,10 @@ import SongList from './SongList';
 function App() {
   const clientId = '0cbc0725b7a74ff995cc752e1bb70448';
   const redirectUri = 'http://localhost:3000';
-  const authEndpoint = 'https://accounts.spotify.com/authorize';
+  const authEndpoint = 'https://accounts.spotify.com/authorize?show_dialog=true&scope=user-library-read';
   const responseType = 'token';
 
-  const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}`;
+  const loginUrl = `${authEndpoint}&client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}`;
 
   const [token, setToken] = useState('');
   const [searchKey, setSearchKey] = useState('');
